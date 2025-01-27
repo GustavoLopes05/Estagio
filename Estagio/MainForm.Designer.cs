@@ -70,7 +70,7 @@
             this.menuContextoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.menuContextoToolStripMenuItem.Text = "Menu Contexto";
             this.menuContextoToolStripMenuItem.Visible = false;
-            this.menuContextoToolStripMenuItem.Click += new System.EventHandler(this.limparCamposToolStripMenuItem_Click);
+
             // 
             // limparCamposToolStripMenuItem
             // 
