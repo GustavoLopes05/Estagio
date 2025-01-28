@@ -43,7 +43,7 @@
             this.menuContextoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1042, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(694, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,7 +58,7 @@
             // childFormToolStripMenuItem
             // 
             this.childFormToolStripMenuItem.Name = "childFormToolStripMenuItem";
-            this.childFormToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.childFormToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.childFormToolStripMenuItem.Text = "Child Form";
             this.childFormToolStripMenuItem.Click += new System.EventHandler(this.childFormToolStripMenuItem_Click);
             // 
@@ -70,19 +70,19 @@
             this.menuContextoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.menuContextoToolStripMenuItem.Text = "Menu Contexto";
             this.menuContextoToolStripMenuItem.Visible = false;
-
             // 
             // limparCamposToolStripMenuItem
             // 
             this.limparCamposToolStripMenuItem.Name = "limparCamposToolStripMenuItem";
             this.limparCamposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.limparCamposToolStripMenuItem.Text = "Limpar Campos ";
+            this.limparCamposToolStripMenuItem.Click += new System.EventHandler(this.limparCamposToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 512);
+            this.ClientSize = new System.Drawing.Size(694, 308);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

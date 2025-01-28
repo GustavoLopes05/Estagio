@@ -12,26 +12,32 @@ namespace Estagio
 {
     public partial class MainForm : Form
     {
-        
 
         public MainForm()
         {
             InitializeComponent();
+
         }
 
-        public void MenuContexto()
+        public void Menucontexto(bool Menucontexto)
         {
-            menuContextoToolStripMenuItem.Visible = false;
+            menuContextoToolStripMenuItem.Visible = Menucontexto;
         }
 
         private void childFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            menuContextoToolStripMenuItem.Visible = true;
-            ChildForm Child = new ChildForm();
+            Menucontexto(true);
+            ChildForm Child = new ChildForm(this);
             Child.MdiParent = this;
             Child.Show();
 
         }
 
-    }
+        private void limparCamposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChildForm Child = new ChildForm(this);
+            Child.Limparcontexto();
+
+        }
+}
 }
