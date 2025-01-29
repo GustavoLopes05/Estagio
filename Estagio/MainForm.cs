@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Estagio
 {
     public partial class MainForm : Form
     {
 
+        public static ChildForm myFormInstance;
+
         public MainForm()
         {
             InitializeComponent();
-
         }
 
         public void Menucontexto(bool Menucontexto)
@@ -26,17 +28,25 @@ namespace Estagio
 
         private void childFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Menucontexto(true);
-            ChildForm Child = new ChildForm(this);
-            Child.MdiParent = this;
-            Child.Show();
+
+            if (myFormInstance == null || myFormInstance.IsDisposed)
+            {
+                myFormInstance = new ChildForm(this);
+                myFormInstance.MdiParent = this;
+                myFormInstance.Size = this.Size;
+                myFormInstance.Show();
+            }
+            else
+            {
+                myFormInstance.Focus(); // Bring it to the front
+            }
+   
 
         }
 
         private void limparCamposToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildForm Child = new ChildForm(this);
-            Child.Limparcontexto();
+            myFormInstance.Limparcontexto();
 
         }
 }

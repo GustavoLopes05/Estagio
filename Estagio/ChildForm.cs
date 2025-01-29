@@ -43,5 +43,10 @@ namespace Estagio
         {
             _MainForm.Menucontexto(true);
         }
+
+        private void ChildForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _MainForm.Menucontexto(false);
+        }
     }
 }

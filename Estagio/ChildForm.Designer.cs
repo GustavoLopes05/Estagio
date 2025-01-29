@@ -34,7 +34,6 @@
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuContextoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.textBox_Apelido = new System.Windows.Forms.TextBox();
             this.textBox_Idade = new System.Windows.Forms.TextBox();
@@ -75,7 +74,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnLimpar);
             this.panel1.Controls.Add(this.textBox_Nome);
             this.panel1.Controls.Add(this.textBox_Apelido);
             this.panel1.Controls.Add(this.textBox_Idade);
@@ -89,17 +87,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(627, 234);
             this.panel1.TabIndex = 2;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLimpar.Location = new System.Drawing.Point(33, 162);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(124, 35);
-            this.btnLimpar.TabIndex = 4;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // textBox_Nome
             // 
@@ -169,6 +156,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ChildForm";
             this.Text = "ChildForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChildForm_FormClosing);
             this.Load += new System.EventHandler(this.ChildForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
@@ -192,6 +180,5 @@
         private System.Windows.Forms.TextBox textBox_Nome;
         private System.Windows.Forms.TextBox textBox_Apelido;
         private System.Windows.Forms.TextBox textBox_Idade;
-        private System.Windows.Forms.Button btnLimpar;
     }
 }
